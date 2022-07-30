@@ -64,8 +64,8 @@ ul a:hover, ul a:active {
     display: grid;
     -ms-grid-columns: [start] 1fr [first-col] 3fr [end];
         grid-template-columns: [start] 1fr [first-col] 3fr [end];
-    -ms-grid-rows: [start] (3rem [top])[2] [bottom] auto [end];
-        grid-template-rows: [start] repeat(2, 3rem [top]) [bottom] auto [end];
+    -ms-grid-rows: [start] 3rem [top] 3rem [bottom] auto [end];
+        grid-template-rows: [start] 3rem [top] 3rem [bottom] auto [end];
   }
   body > header {
     grid-column: start;
@@ -96,6 +96,9 @@ ul a:hover, ul a:active {
     -webkit-box-align: stretch;
         -ms-flex-align: stretch;
             align-items: stretch;
+  }
+  header li {
+    display: block;
   }
 }
 
