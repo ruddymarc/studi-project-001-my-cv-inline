@@ -1,0 +1,111 @@
+/* Vars declaration */
+/* Placeholder declaration */
+ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: .2em 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  background-color: #34495E;
+  color: #FBFCFC;
+  padding: .2em .3em;
+}
+
+header li:nth-child(3) ~ li {
+  display: none;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font: italic small-caps bold 1.1em/1.5 cursive;
+}
+
+ul {
+  padding: .9em 0;
+  margin: 0;
+  list-style: none;
+  background-color: #34495E;
+  color: #FBFCFC;
+}
+
+ul a {
+  font: small-caps bold 1.1em/1 sans-serif;
+  color: inherit;
+  text-decoration: none;
+}
+
+ul a:hover, ul a:active {
+  color: #FECA3E;
+}
+
+@media screen and (min-width: 720px) {
+  body {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [start] 1fr [first-col] 3fr [end];
+        grid-template-columns: [start] 1fr [first-col] 3fr [end];
+    -ms-grid-rows: [start] (3rem [top])[2] [bottom] auto [end];
+        grid-template-rows: [start] repeat(2, 3rem [top]) [bottom] auto [end];
+  }
+  body > header {
+    grid-column: start;
+    grid-row: start / end;
+  }
+  body > nav {
+    grid-column: start / end;
+    grid-row: top;
+    border: #34495E;
+    -webkit-box-shadow: 2px 2px 2px 1px #d6d6d6, 2px -2px 2px 1px #d6d6d6;
+            box-shadow: 2px 2px 2px 1px #d6d6d6, 2px -2px 2px 1px #d6d6d6;
+    padding-left: 20%;
+  }
+  body > main {
+    grid-column: first-col / end;
+    grid-row: bottom / end;
+    padding: .8em;
+  }
+  h1::before {
+    content: url("../images/photo-profile.svg");
+    display: block;
+  }
+  header ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
+@media screen and (min-width: 720px) and (orientation: portrait) {
+  body {
+    -ms-grid-columns: [start] 1fr [first-col] 2fr [end];
+        grid-template-columns: [start] 1fr [first-col] 2fr [end];
+  }
+  body > nav {
+    padding-left: 30%;
+  }
+}
+/*# sourceMappingURL=my-cv-inline.css.map */
